@@ -1,0 +1,26 @@
+{
+  "project_type": "javascript",
+  "debugMode": 1,
+  "showFPS": true,
+  "frameRate": 60,
+  "noCache": true,
+  "id": "gameCanvas",
+  "renderMode": 0,
+  "engineDir": "frameworks/cocos2d-html5",
+  "modules": [
+    "cocos2d"
+  ],
+  "jsList": [
+    "src/resource.js",
+    "src/global.js",
+    "src/scene/menu.js",
+    "src/scene/help.js",
+    "src/scene/game.js",
+    "src/node/background.js",
+    "src/node/bullet.js",
+    "src/node/enemy.js",
+    "src/node/explode.js",
+    "src/node/player.js",
+    "src/node/tool.js"
+  ]
+}
