@@ -2,8 +2,10 @@
  * Created by Henry on 16/7/6.
  */
 var MenuLayer = cc.Layer.extend({
+    loadCount: 1,
     ctor: function () {
         this._super();
+        this.loadCount = 1;
         // 加载plist
         cc.spriteFrameCache.addSpriteFrames(res.shoot_background_plist);
         // 滚动背景图1
@@ -40,7 +42,22 @@ var MenuLayer = cc.Layer.extend({
         var menu = new cc.Menu(startBtn, helpBtn);
         this.addChild(menu);
         this.schedule(this.update);
+        // loading动画
+        var loading = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("game_loading1.png"));
+        loading.setPositionX(50 + cc.winSize.width * this.loadCount / 5);
+        loading.setPositionY(200);
+        loading.setTag(3);
+        this.addChild(loading);
+        this.schedule(this.loading, 0.5);
         return true;
+    },
+    loading: function () {
+        if (this.loadCount == 4) {
+            this.loadCount = 1;
+        } else {
+            this.loadCount++;
+        }
+        this.getChildByTag(3).setPositionX(50 + cc.winSize.width * this.loadCount / 5);
     },
     update: function () {
         var menuBg1 = this.getChildByTag(1);
