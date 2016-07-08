@@ -17,6 +17,7 @@
     "src/scene/help.js",
     "src/scene/game.js",
     "src/node/background.js",
+    "src/node/loading.js",
     "src/node/bullet.js",
     "src/node/enemy.js",
     "src/node/explode.js",

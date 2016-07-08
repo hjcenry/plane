@@ -8,18 +8,10 @@ var MenuLayer = cc.Layer.extend({
         this.loadCount = 1;
         // 加载plist
         cc.spriteFrameCache.addSpriteFrames(res.shoot_background_plist);
-        // 滚动背景图1
-        var menuBg1 = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("background.png"));
-        menuBg1.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
-        menuBg1.setScale(750 / 480);
-        menuBg1.setTag(1);
-        this.addChild(menuBg1);
-        // 滚动背景图2
-        var menuBg2 = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("background.png"));
-        menuBg2.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 + cc.winSize.height - 4);
-        menuBg2.setScale(750 / 480);
-        menuBg2.setTag(2);
-        this.addChild(menuBg2);
+        // 添加背景图
+        var bg = new Background();
+        bg.setPosition(0,0);
+        this.addChild(bg);
         // logo
         var copyright = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("shoot_copyright.png"));
         copyright.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 + 270);
@@ -41,37 +33,11 @@ var MenuLayer = cc.Layer.extend({
         helpBtn.setPositionY(startBtn.getPositionY() - startBtn.height / 2 - 100);
         var menu = new cc.Menu(startBtn, helpBtn);
         this.addChild(menu);
-        this.schedule(this.update);
         // loading动画
-        var loading = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("game_loading1.png"));
-        loading.setPositionX(50 + cc.winSize.width * this.loadCount / 5);
-        loading.setPositionY(200);
-        loading.setTag(3);
+        var loading = new Loading();
+        loading.setPosition(0,0);
         this.addChild(loading);
-        this.schedule(this.loading, 0.5);
         return true;
-    },
-    loading: function () {
-        if (this.loadCount == 4) {
-            this.loadCount = 1;
-        } else {
-            this.loadCount++;
-        }
-        this.getChildByTag(3).setPositionX(50 + cc.winSize.width * this.loadCount / 5);
-    },
-    update: function () {
-        var menuBg1 = this.getChildByTag(1);
-        var menuBg2 = this.getChildByTag(2);
-        if (menuBg1.getPositionY() <= -cc.winSize.height / 2 + 20) {
-            menuBg1.setPositionY(cc.winSize.height / 2 + cc.winSize.height);
-        } else {
-            menuBg1.setPositionY(menuBg1.getPositionY() - 1);
-        }
-        if (menuBg2.getPositionY() <= -cc.winSize.height / 2 + 20) {
-            menuBg2.setPositionY(cc.winSize.height / 2 + cc.winSize.height);
-        } else {
-            menuBg2.setPositionY(menuBg2.getPositionY() - 1);
-        }
     }
 });
 
