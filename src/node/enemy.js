@@ -30,6 +30,7 @@ var Enemy = cc.Sprite.extend({
         }
         return true;
     },
+    // 创造三个小型飞机
     createEnemy:function(){
         var enemy1 = new Enemy(1,this.gameLayer);
         var enemy2 = new Enemy(1,this.gameLayer);
@@ -61,6 +62,7 @@ var Enemy = cc.Sprite.extend({
 	    }
 	    this.removeFromParent();
     },
+    // 击中
     hit:function(){
     	// 击中动画
     	this.hp -= 1;
@@ -78,6 +80,7 @@ var Enemy = cc.Sprite.extend({
 	        },this)));
     	}
     },
+    // 爆炸
     blowUp:function(){
         if(this.type==3){
             // 大飞机爆炸产生3个小飞机

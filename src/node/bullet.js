@@ -5,17 +5,7 @@ var Bullet = cc.Sprite.extend({
 	gameLayer:null,
     ctor: function (type,isUp,gameLayer) {
     	this.gameLayer = gameLayer;
-    	switch (type) {
-    		case 1:
-    			this._super(cc.spriteFrameCache.getSpriteFrame("bullet1.png"));
-    			break;
-    		case 2:
-    			this._super(cc.spriteFrameCache.getSpriteFrame("bullet2.png"));
-    			break;
-    		default:
-    			this._super();
-    			break;
-    	};
+    	this._super(cc.spriteFrameCache.getSpriteFrame("bullet"+type+".png"));
     	if(isUp){
 			this.schedule(this.moveUp);
     	}else{
