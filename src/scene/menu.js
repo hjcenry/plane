@@ -9,7 +9,7 @@ var MenuLayer = cc.Layer.extend({
         // 加载plist
         cc.spriteFrameCache.addSpriteFrames(res.shoot_background_plist);
         // 添加背景图
-        var bg = new Background();
+        var bg = new Background(false);
         bg.setPosition(0,0);
         this.addChild(bg);
         // logo
@@ -22,12 +22,14 @@ var MenuLayer = cc.Layer.extend({
             new cc.Sprite("res/game_start.png"),
             new cc.Sprite("res/game_start_selected.png"),
             function () {
+                cc.audioEngine.playEffect("res/sound/button.mp3");
                 cc.director.runScene(new cc.TransitionFade(1, new GameScene()));
             }, this);
         var helpBtn = new cc.MenuItemSprite(
             new cc.Sprite("res/game_help.png"),
             new cc.Sprite("res/game_help_selected.png"),
             function () {
+                cc.audioEngine.playEffect("res/sound/button.mp3");
                 cc.director.runScene(new cc.TransitionFade(1, new HelpScene()));
             }, this);
         helpBtn.setPositionY(startBtn.getPositionY() - startBtn.height / 2 - 100);
@@ -35,7 +37,7 @@ var MenuLayer = cc.Layer.extend({
         this.addChild(menu);
         // loading动画
         var loading = new Loading();
-        loading.setPosition(0,0);
+        loading.setPosition(cc.winSize.width/2,200);
         this.addChild(loading);
         return true;
     }

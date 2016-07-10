@@ -4,7 +4,7 @@ var res = {
     shoot_background_png: "res/shoot_background.png",
     shoot_plist: "res/shoot.plist",
     shoot_png: "res/shoot.png",
-    hero1: "res/hero1.png"
+    font:"res/font/font.fnt"
 };
 
 var g_resources = [];

@@ -1,0 +1,47 @@
+2016-07-07T11:47:53.506Z - normal: Load ~/.CocosCreator/settings.json
+2016-07-07T11:47:53.511Z - normal: checking language setting...
+2016-07-07T11:47:53.511Z - normal: Language: zh
+2016-07-07T11:47:53.535Z - success: protocol editor-framework registerred
+2016-07-07T11:47:53.535Z - success: protocol app registerred
+2016-07-07T11:47:53.535Z - success: protocol packages registerred
+2016-07-07T11:47:53.535Z - success: protocol unpack registerred
+2016-07-07T11:47:53.704Z - normal: connected!
+2016-07-07T11:47:53.707Z - normal: Check project /Users/Henry/Documents/project/plane
+2016-07-07T11:47:53.711Z - normal: Initializing Cocos Creator Editor
+2016-07-07T11:47:53.947Z - normal: Initializing Cocos2d
+2016-07-07T11:47:54.095Z - normal: Initializing Asset Database
+2016-07-07T11:47:54.115Z - success: protocol uuid registerred
+2016-07-07T11:47:54.116Z - success: protocol uuid registerred
+2016-07-07T11:47:54.116Z - success: protocol thumbnail registerred
+2016-07-07T11:47:54.116Z - normal: Loading editor/builtin packages
+2016-07-07T11:47:54.226Z - success: assets loaded
+2016-07-07T11:47:54.230Z - success: builder loaded
+2016-07-07T11:47:54.236Z - success: hierarchy loaded
+2016-07-07T11:47:54.240Z - success: inspector loaded
+2016-07-07T11:47:54.242Z - success: keystore loaded
+2016-07-07T11:47:54.246Z - success: node-library loaded
+2016-07-07T11:47:54.250Z - success: preferences loaded
+2016-07-07T11:47:54.266Z - success: project-importer loaded
+2016-07-07T11:47:54.269Z - success: project-settings loaded
+2016-07-07T11:47:54.273Z - success: ui-kit loaded
+2016-07-07T11:47:54.277Z - success: ui-grid loaded
+2016-07-07T11:47:54.282Z - success: scene loaded
+2016-07-07T11:47:54.283Z - success: sprite-editor loaded
+2016-07-07T11:47:54.290Z - success: timeline loaded
+2016-07-07T11:47:54.293Z - success: ui-kit-extra loaded
+2016-07-07T11:47:54.293Z - normal: Loading builtin packages
+2016-07-07T11:47:54.297Z - success: asset-db-debugger loaded
+2016-07-07T11:47:54.299Z - success: code-editor loaded
+2016-07-07T11:47:54.300Z - success: color-picker loaded
+2016-07-07T11:47:54.304Z - success: console loaded
+2016-07-07T11:47:54.308Z - success: package-manager loaded
+2016-07-07T11:47:54.312Z - success: tester loaded
+2016-07-07T11:47:54.316Z - success: ui-tree loaded
+2016-07-07T11:47:54.350Z - normal: Initializing project /Users/Henry/Documents/project/plane
+2016-07-07T11:47:54.351Z - normal: Loading packages
+2016-07-07T11:47:54.356Z - normal: Run Application
+2016-07-07T11:47:54.793Z - success: preview server running at http://localhost:7456
+2016-07-07T11:47:54.793Z - normal: Compiling scripts...
+2016-07-07T11:47:55.884Z - normal: Compiled successfully
+2016-07-07T11:47:58.606Z - normal: 1.1.1
+2016-07-07T11:49:25.412Z - info: shutdown preview server

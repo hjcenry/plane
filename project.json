@@ -16,11 +16,12 @@
     "src/scene/menu.js",
     "src/scene/help.js",
     "src/scene/game.js",
+    "src/scene/gameover.js",
+    "src/scene/pause.js",
     "src/node/background.js",
     "src/node/loading.js",
     "src/node/bullet.js",
     "src/node/enemy.js",
-    "src/node/explode.js",
     "src/node/player.js",
     "src/node/tool.js"
   ]

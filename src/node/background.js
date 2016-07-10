@@ -2,22 +2,30 @@
  * Created by Henry on 16/7/6.
  */
  var Background = cc.Sprite.extend({
-     ctor: function () {
-         this._super();
-         // // 滚动背景图1
-         var menuBg1 = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("background.png"));
-         menuBg1.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
-         menuBg1.setScale(750 / 480);
-         menuBg1.setTag(1);
-         this.addChild(menuBg1);
-         // 滚动背景图2
-         var menuBg2 = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("background.png"));
-         menuBg2.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 + cc.winSize.height - 4);
-         menuBg2.setScale(750 / 480);
-         menuBg2.setTag(2);
-         this.addChild(menuBg2);
-         this.schedule(this.update);
-         return true;
+     ctor: function (isOver) {
+        if(isOver){
+            this._super();
+            var bg = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("gameover.png"));
+            bg.setScale(750/480);
+            this.addChild(bg);
+        }else{
+            this._super();
+            this.setScale(750/480);
+            // 滚动背景图1
+            var menuBg1 = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("background.png"));
+            menuBg1.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
+            menuBg1.setScale(750 / 480);
+            menuBg1.setTag(1);
+            this.addChild(menuBg1);
+            // 滚动背景图2
+            var menuBg2 = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("background.png"));
+            menuBg2.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 + cc.winSize.height - 4);
+            menuBg2.setScale(750 / 480);
+            menuBg2.setTag(2);
+            this.addChild(menuBg2);
+            this.schedule(this.update);
+        }
+        return true;
      },
      stopMove:function(){
         this.unschedule(this.update);
